@@ -1,0 +1,10 @@
+
+<!--we can have anythinbg in the curly braces, only condition is that it needs to return a string, examples:-->
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass] = "{online : serverStatus === 'online'}"> {{'server'}} ID {{serverId}} status is {{serverStatus}}</p>
+
+<!--
+
+OR
+<p> server ID {{serverId}} status is {{getServerStatus()}}</p>
+-->
