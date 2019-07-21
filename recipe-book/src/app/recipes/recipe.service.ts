@@ -10,7 +10,7 @@ export class RecipeService {
   private recipes: Recipe[] = [
     new Recipe(
       'Chicken Biryani',
-      'Rice dish loaded with spicy marinated chicken, caramelized onions',
+      'Hyderabadi rice dish',
       'https://norecipes.com/wp-content/uploads/2017/05/chicken-biryani-12.jpg',
       [
         new Ingredient('Chicken', 1),
@@ -18,7 +18,7 @@ export class RecipeService {
         new Ingredient('Onions', 2),
       ]),
     new Recipe('Pav Bhaji',
-      'spicy mix vegetable mash & soft buns',
+      'Mumbai street food',
       'https://hebbarskitchen.com/wp-content/uploads/2016/12/pav-bhaji-recipe-in-cooker-quick-easy-pav-bhaji-recipe-16-769x1024.jpeg',
       [
         new Ingredient('Buns', 2),
@@ -37,6 +37,10 @@ export class RecipeService {
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
 
+  }
+
+  getRecipe(index: number) {
+    return this.recipes.slice()[index];
   }
 
 }
